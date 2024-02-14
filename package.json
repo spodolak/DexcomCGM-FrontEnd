@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://diabetic-mood-ring-98843adb3ac1.herokuapp.com/",
-  "homepage": "http://spodolak.github.io/DexcomCGM",
+  "homepage": "https://diabetic-mood-ring-front-end-7190da4f9707.herokuapp.com/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
