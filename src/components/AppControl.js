@@ -32,7 +32,7 @@ class AppControl extends React.Component {
             ).then(
                 data => {
                     this.setState({bloodSugarValues: data.egvs});
-                    this.setState({currentBloodSugar: data.egvs[287].value});
+                    this.setState({currentBloodSugar: data.egvs[100].value});
                     console.log(data)
                 }
             ) 
