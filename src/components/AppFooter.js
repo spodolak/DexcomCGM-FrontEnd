@@ -19,12 +19,6 @@ const useStyles = makeStyles({
     highAlert: {
         width: '100%',
         background: '#FF1B1C'
-        // background: '#F46036'
-        // background: '#FF8811'
-        // background: '#BC2C1A'
-        // background: '#832232'
-        // background: '#EF3E36'
-        // background: '#FF331F'
     },
 });
 
@@ -66,7 +60,7 @@ export default function FootNavigation(props) {
                         <BottomNavigationAction label="Graph" value="graph" icon={<TimelineIcon />} style={{ color: "white" }} />
                     </BottomNavigation> :
                     <BottomNavigation value={value} onChange={handleChange} className={style}>
-                        <p id="footer">© 2020 Steph Podolak</p>
+                        <p id="footer">© 2024 Stephanie Podolak</p>
                     </BottomNavigation>
                 }
             </div>
