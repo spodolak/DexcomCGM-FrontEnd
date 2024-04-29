@@ -30,7 +30,7 @@ class AppControl extends React.Component {
     authorizeDexcomUser = () => {
             let code = window.location.search.slice(6, 38);
             console.log("test");
-            fetch( hostApiUrl + 'test/authorizeDexcomUser?code=' + code).then(
+            fetch( hostApiUrl + '/authorizeDexcomUser?code=' + code).then(
                 response => response.json()
             ).then(
                 data => {
