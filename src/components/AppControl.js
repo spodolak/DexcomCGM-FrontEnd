@@ -27,7 +27,8 @@ class AppControl extends React.Component {
 
     authorizeDexcomUser = () => {
             let code = window.location.search.slice(6, 38);
-            fetch('https://cors-anywhere.herokuapp.com/https://diabetic-mood-ring-98843adb3ac1.herokuapp.com/authorizeDexcomUser?code='+ code).then(
+            console.log("test");
+            fetch(process.env.REACT_APP_API + '/authorizeDexcomUser?code=' + code).then(
                 response => response.json()
             ).then(
                 data => {
@@ -35,6 +36,11 @@ class AppControl extends React.Component {
                     this.setState({currentBloodSugar: data.egvs[100].value});
                     console.log(data)
                 }
+            ).catch( 
+                error => {
+                    console.error('Response status:', error.response.status);
+                    console.error('Response text:', error.response.statusText);
+                } 
             ) 
     }
 
