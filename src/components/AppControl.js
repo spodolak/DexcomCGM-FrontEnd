@@ -8,6 +8,8 @@ import DexcomError from './DexcomError.js';
 import Graph from './Graph.js';
 import FootNavigation from './AppFooter.js';
 
+const hostApiUrl = process.env.REACT_APP_HOST_API;
+
 class AppControl extends React.Component {
     constructor(props) {
         super(props);
@@ -28,7 +30,7 @@ class AppControl extends React.Component {
     authorizeDexcomUser = () => {
             let code = window.location.search.slice(6, 38);
             console.log("test");
-            fetch(process.env.REACT_APP_API + '/authorizeDexcomUser?code=' + code).then(
+            fetch( hostApiUrl + '/authorizeDexcomUser?code=' + code).then(
                 response => response.json()
             ).then(
                 data => {

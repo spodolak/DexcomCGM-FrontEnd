@@ -7,7 +7,7 @@ import '../App.css';
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const host = process.env.REACT_APP_HOST;
-const apiEnvironment = process.env.REACT_APP_DEXCOM_API_ENVIRONMENT;
+const dexcomApiEnvironment = process.env.REACT_APP_DEXCOM_API_ENVIRONMENT;
 
 
 function Dexcom(props) {
@@ -24,7 +24,7 @@ function Dexcom(props) {
                 <Grid item xs={12}>
                     <a
                         className="App-link"
-                        href={'https://' + apiEnvironment + '/v2/oauth2/login?client_id=' + clientId + '&redirect_uri=' + host + '&response_type=code&scope=offline_access&state=auth'}
+                        href={'https://' + dexcomApiEnvironment + '/v2/oauth2/login?client_id=' + clientId + '&redirect_uri=' + host + '&response_type=code&scope=offline_access&state=auth'}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => props.onClickingLogIn}
